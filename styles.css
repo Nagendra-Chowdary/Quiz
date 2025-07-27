@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 100px;
+    font-family: sans-serif;
+    background-color: pink;
+}
+main{
+    margin:auto;
+    max-width: 800px;
+    border-radius: 32px;
+    background: linear-gradient(pink,rgb(0, 0, 0));
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    color: rgb(26, 24, 24);
+    align-items: center;
+    flex-direction: column;
+    padding: auto 35px;
+    
+    
+}
+h1{
+    margin: 0%;
+    font-size: 200px;
+}
+#title{
+    margin-bottom: 30px;
+    text-align: center;
+}
+button{
+    font-size: 25px;
+    min-width: 120px;
+    font-family: sans-serif;
+    border-radius: 20px;
+    border: 0;
+    color: rgb(221, 126, 142);
+    }
+    
+    .questyle{
+        border: 0;
+        margin-left: 550px;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 5px;
+    }
+.ques p{
+min-height: 200px;
+min-width: 400px;
+font-size: 35px;
+margin: 0%;
+    padding-left: 45px;
+}
+.ques p input{
+    transform: scale(1.5);
+    vertical-align:middle;
+
+}
