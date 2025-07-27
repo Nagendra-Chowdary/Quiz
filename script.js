@@ -60,7 +60,7 @@ document.getElementsByTagName("button")[0].addEventListener("click",()=>{
                 ans=1;
                }
                else{
-                ans=0;
+                ans=0; 
                }
             }
           }
