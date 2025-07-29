@@ -39,19 +39,19 @@ button{
     .questyle{
         border: 0;
         margin-left: 550px;
-        font-size: 15px;
+        font-size: 18px;
         border-radius: 20px;
         padding: 5px;
     }
 .ques p{
 min-height: 200px;
 min-width: 400px;
-font-size: 25px;
+font-size: 20px;
 margin: 0%;
     padding-left: 45px;
 }
 .ques p input{
-    transform: scale(1.5);
-    vertical-align:middle;
+    transform: scale(1.2);
+    /* vertical-align:middle; */
 
 }

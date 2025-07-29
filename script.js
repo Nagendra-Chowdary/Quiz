@@ -35,10 +35,10 @@ document.getElementsByTagName("button")[0].addEventListener("click",()=>{
         console.log("#");
         
         document.querySelector(".question").innerHTML=`<p>
-         ${questions[0][0]}<br>
-         <input type="radio" name="ques" value="${questions[0][1]}">&nbsp;${questions[0][1]}<br>
-         <input type="radio" name="ques" value="${questions[0][2]}">&nbsp;${questions[0][2]}<br>
-         <input type="radio" name="ques" value="${questions[0][3]}">&nbsp;${questions[0][3]}<br>
+         ${questions[0][0]}<br><br>
+         <input type="radio" name="ques" value="${questions[0][1]}">&nbsp;${questions[0][1]}<br><br>
+         <input type="radio" name="ques" value="${questions[0][2]}">&nbsp;${questions[0][2]}<br><br>
+         <input type="radio" name="ques" value="${questions[0][3]}">&nbsp;${questions[0][3]}<br><br>
      
          </p>
         
@@ -67,10 +67,10 @@ document.getElementsByTagName("button")[0].addEventListener("click",()=>{
           answers.push(ans);
         
          document.querySelector(".question").innerHTML=`<p>
-         ${questions[questionNumber][0]}<br>
-         <input type="radio" name="ques" value="${questions[questionNumber][1]}">&nbsp;${questions[questionNumber][1]}<br>
-         <input type="radio" name="ques" value="${questions[questionNumber][2]}">&nbsp;${questions[questionNumber][2]}<br>
-         <input type="radio" name="ques" value="${questions[questionNumber][3]}">&nbsp;${questions[questionNumber][3]}<br>
+         ${questions[questionNumber][0]} <br><br>
+         <input type="radio" name="ques" value="${questions[questionNumber][1]}">&nbsp;${questions[questionNumber][1]}<br><br>
+         <input type="radio" name="ques" value="${questions[questionNumber][2]}">&nbsp;${questions[questionNumber][2]}<br><br>
+         <input type="radio" name="ques" value="${questions[questionNumber][3]}">&nbsp;${questions[questionNumber][3]}<br><br>
      
          </p>
         
