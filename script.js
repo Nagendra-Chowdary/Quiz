@@ -29,6 +29,9 @@ let answers=[];
 document.getElementsByTagName("button")[0].addEventListener("click",()=>{
     console.log("enter");
     
+    document.querySelector(".progress").style.width=`${(answers.length)*10}%`;
+    console.log(answers.length);
+    
     if((answers.length)==0){
 
         answers.push("#")
@@ -36,9 +39,9 @@ document.getElementsByTagName("button")[0].addEventListener("click",()=>{
         
         document.querySelector(".question").innerHTML=`<p>
          ${questions[0][0]}<br><br>
-         <input type="radio" name="ques" value="${questions[0][1]}">&nbsp;${questions[0][1]}<br><br>
-         <input type="radio" name="ques" value="${questions[0][2]}">&nbsp;${questions[0][2]}<br><br>
-         <input type="radio" name="ques" value="${questions[0][3]}">&nbsp;${questions[0][3]}<br><br>
+         <input type="radio" name="ques" value="${questions[0][1]}" id="${questions[0][1]}">&nbsp;<a  href="#" onclick="document.getElementById('${questions[0][1]}').checked=true;return false;">${questions[0][1]}</a><br><br>
+         <input type="radio" name="ques" value="${questions[0][2]}" id="${questions[0][2]}">&nbsp;<a  href="#" onclick="document.getElementById('${questions[0][2]}').checked=true;return false;">${questions[0][2]}</a><br><br>
+         <input type="radio" name="ques" value="${questions[0][3]}" id="${questions[0][3]}">&nbsp;<a  href="#" onclick="document.getElementById('${questions[0][3]}').checked=true;return false;">${questions[0][3]}</a><br><br>
      
          </p>
         
@@ -47,33 +50,42 @@ document.getElementsByTagName("button")[0].addEventListener("click",()=>{
         q.setAttribute("class","question ques");
         document.querySelector(".start").innerHTML="Next &#10230;";
         let p=document.querySelector(".start");
-         p.setAttribute("class","questyle");
+        p.setAttribute("class","questyle");
+        document.querySelector(".progressBar").style.display="block";
 
 
     }else if((answers.length)<10){
           let questionNumber=answers.length;
        let ans=0;
           let a=document.getElementsByName("ques");
+          let crct;
+          let wrng;
           for(let i of a){
             if (i.checked){
-               if((i.value)==rightAnswers[questionNumber-1]){
+              if((i.value)==rightAnswers[questionNumber-1]){
+
+                i.classList.add("correct");
+                
+              }
+              if((i.value)==rightAnswers[questionNumber-1]){
                 ans=1;
-               }
-               else{
+              }
+              else{
+                 i.classList.add("wrong");
+
                 ans=0; 
                }
             }
           }
-          answers.push(ans);
-        
-         document.querySelector(".question").innerHTML=`<p>
+
+            answers.push(ans);
+            
+            document.querySelector(".question").innerHTML=`<p>
          ${questions[questionNumber][0]} <br><br>
-         <input type="radio" name="ques" value="${questions[questionNumber][1]}">&nbsp;${questions[questionNumber][1]}<br><br>
-         <input type="radio" name="ques" value="${questions[questionNumber][2]}">&nbsp;${questions[questionNumber][2]}<br><br>
-         <input type="radio" name="ques" value="${questions[questionNumber][3]}">&nbsp;${questions[questionNumber][3]}<br><br>
-     
-         </p>
-        
+         <input type="radio" name="ques" value="${questions[questionNumber][1]}" id="${questions[questionNumber][1]}">&nbsp;<a href="#" onclick="document.getElementById('${questions[questionNumber][1]}').checked=true;return false;">${questions[questionNumber][1]}</a><br><br>
+         <input type="radio" name="ques" value="${questions[questionNumber][2]}" id="${questions[questionNumber][2]}">&nbsp;<a href="#" onclick="document.getElementById('${questions[questionNumber][2]}').checked=true;return false;">${questions[questionNumber][2]}</a><br><br>
+         <input type="radio" name="ques" value="${questions[questionNumber][3]}" id="${questions[questionNumber][3]}">&nbsp;<a href="#" onclick="document.getElementById('${questions[questionNumber][3]}').checked=true;return false;">${questions[questionNumber][3]}</a><br><br>
+         
          `;
     }else{
   let questionNumber=answers.length;

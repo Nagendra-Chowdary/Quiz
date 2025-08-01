@@ -38,7 +38,7 @@ button{
     
     .questyle{
         border: 0;
-        margin-left: 550px;
+        margin-left: 400px;
         font-size: 18px;
         border-radius: 20px;
         padding: 5px;
@@ -54,4 +54,30 @@ margin: 0%;
     transform: scale(1.2);
     /* vertical-align:middle; */
 
+}
+.correct{
+    color: green;
+}
+.wrong{
+    color: red;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.progressBar{
+    height: 8px;
+    width: 30vw;
+    border-radius: 5px;
+    margin-bottom: 23px;
+    /* border: rgb(218, 209, 228) solid 1px ; */
+    background-color: white;
+    display: none;
+    
+}
+.progress{
+    border-radius: 5px;
+    background-color: rgb(31, 18, 32);
+    width: 0%;
+    height: 100%;
 }
